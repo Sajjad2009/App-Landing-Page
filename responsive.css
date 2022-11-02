@@ -1,0 +1,80 @@
+
+@media (min-width:768px) {
+
+    .header {
+        position: fixed;
+        width: 100%;
+        transition: 0.5s all;
+    }
+    h1 {
+        font-size: 4rem;
+    }
+    .nav{
+        display: flex;
+        justify-content: space-between;
+    }
+    /* hero-section */
+
+    .hero-section{
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    .hero-img img {
+        animation: box-animation 1s ease-in-out 0s infinite alternate-reverse;
+    }
+
+       @keyframes box-animation {
+         from {
+               transform: translateY(10px);
+           }
+       
+           to {
+                transform: translateY(-10px);
+           }
+       }
+    .hero-content{
+       align-items: flex-start;
+       text-align: left;
+    }
+    /* feature-section */
+
+    .feature{
+        position:relative;
+    }
+
+    .feature::before{
+        content: '';
+        width: 86px;
+        height: 168px;
+        background-color: var(--primary-color);
+        top: -86px;
+        left: -15px;
+        position: absolute;
+    }
+
+    .feature::after{
+        content: '';
+        width: 142px;
+        height: 109px;
+        background: url(assets/dots.png);
+        top: 42px;
+        left: 28px;
+        position: absolute; 
+    }
+    .feature-section{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .testimonial-section{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-section {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+    .contact-form,.maps{
+        width: 45%;
+    }
+}
